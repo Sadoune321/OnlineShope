@@ -1,0 +1,16 @@
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\model\Product.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\port\IProductRepository.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\port\IOrderRepository.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\port\IShopUseCase.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\infrastructure\persistence\ProductMapper.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\com\mycompany\superretonline\resources\JakartaEE10Resource.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\infrastructure\adapter\ProductRepositoryJPA.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\com\mycompany\superretonline\JakartaRestConfiguration.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\model\Order.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\adapter\web\MiniShopServlet.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\model\CartItem.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\infrastructure\adapter\OrderRepositoryJPA.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\port\ICartRepository.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\infrastructure\persistence\ProductEntity.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\domain\service\ShopService.java
+C:\Users\tassili\Documents\NetBeansProjects\SuperretOnline\src\main\java\infrastructure\adapter\CartRepositoryEJB.java

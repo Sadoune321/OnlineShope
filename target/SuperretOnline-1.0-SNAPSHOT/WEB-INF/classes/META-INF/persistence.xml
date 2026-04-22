@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0"
+    xmlns="https://jakarta.ee/xml/ns/persistence"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                        https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="MinishopPU" transaction-type="JTA">
+        <!--
+            La datasource JNDI doit être créée dans GlassFish AVANT le déploiement.
+            Voir les instructions ci-dessous pour la créer via la console d'admin
+            ou via asadmin.
+
+            IMPORTANT : GlassFish préfixe automatiquement java:app/ ou java:/comp/env/
+            selon le contexte. On utilise java:app/jdbc/MinishopMySQL pour éviter
+            les conflits entre applications.
+        -->
+        <jta-data-source>jdbc/MinishopMySQL</jta-data-source>
+        <!-- UNIQUEMENT les entités JPA (infrastructure) -->
+        <class>infrastructure.persistence.ProductEntity</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+
+        <properties>
+            <!-- EclipseLink (JPA provider de GlassFish) -->
+            <property name="eclipselink.logging.level"         value="WARNING"/>
+            <property name="eclipselink.target-database"       value="MySQL"/>
+            <property name="eclipselink.logging.level.sql"     value="WARNING"/>
+
+            <!--
+                NE PAS mettre les credentials JDBC ici avec JTA :
+                c'est la datasource GlassFish qui gère la connexion.
+                Les propriétés jdbc.* ci-dessous sont ignorées en mode JTA.
+            -->
+        </properties>
+    </persistence-unit>
+</persistence>
+

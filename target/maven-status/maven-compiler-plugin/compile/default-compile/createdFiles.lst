@@ -1,0 +1,17 @@
+infrastructure\adapter\ProductRepositoryJPA.class
+infrastructure\adapter\OrderRepositoryJPA.class
+domain\model\Order$OrderStatus.class
+domain\service\ShopService.class
+domain\port\IShopUseCase.class
+domain\model\CartItem.class
+domain\port\ICartRepository.class
+com\mycompany\superretonline\JakartaRestConfiguration.class
+domain\port\IProductRepository.class
+com\mycompany\superretonline\resources\JakartaEE10Resource.class
+domain\port\IOrderRepository.class
+infrastructure\persistence\ProductEntity.class
+domain\model\Product.class
+infrastructure\adapter\CartRepositoryEJB.class
+infrastructure\persistence\ProductMapper.class
+adapter\web\MiniShopServlet.class
+domain\model\Order.class
