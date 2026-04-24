@@ -35,7 +35,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* ── BLOBS CRÈME ── */
         .blob {
             position: fixed;
             border-radius: 50%;
@@ -69,7 +68,6 @@
             50%       { transform: translate(18px, -18px) scale(1.04); }
         }
 
-        /* ── CARD ── */
         .card {
             position: relative;
             z-index: 1;
@@ -90,7 +88,6 @@
             to   { opacity: 1; transform: translateY(0) scale(1); }
         }
 
-        /* ── LOGO ── */
         .logo {
             display: flex;
             align-items: center;
@@ -125,7 +122,6 @@
 
         .logo-name span { color: var(--gold-dark); }
 
-        /* ── TITRE ── */
         h1 {
             font-family: 'Cormorant Garamond', serif;
             font-size: 2.4rem;
@@ -143,7 +139,6 @@
             margin-bottom: 38px;
         }
 
-        /* ── STATS ── */
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -183,7 +178,6 @@
             letter-spacing: 0.6px;
         }
 
-        /* ── BOUTON ── */
         .btn-enter {
             display: flex;
             align-items: center;
@@ -218,7 +212,6 @@
         .btn-arrow { transition: transform 0.2s ease; }
         .btn-enter:hover .btn-arrow { transform: translateX(5px); }
 
-        /* ── FOOTER ── */
         footer {
             position: fixed;
             bottom: 24px;
@@ -260,8 +253,8 @@
             </div>
         </div>
 
-        <!-- FLUX : index.html → GET /shop → Servlet → index.jsp -->
-        <a href="shop" class="btn-enter">
+        <!-- URL ngrok → GlassFish local -->
+        <a href="https://wrongly-identify-large.ngrok-free.dev/SuperretOnline/shop" class="btn-enter">
             Accéder à la boutique
             <span class="btn-arrow">→</span>
         </a>
