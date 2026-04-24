@@ -27,11 +27,9 @@ public class OrderRepositoryJPA implements IOrderRepository {
             itemsText.append(item.toString()).append(" | ");
         }
 
-       
         try {
-            em.createNativeQuery(
-                "NSERT INTO PURCHASE_ORDER" +
-                "(QUANTITY, SHIPPING_COST, SALES_DATE, FREIGHT_COMPANY) VALUES (?, ?, ?, ?)")
+           
+            em.createNativeQuery("INSERT INTO PURCHASE_ORDER(QUANTITY, SHIPPING_COST, SALES_DATE, FREIGHT_COMPANY) VALUES (?, ?, ?, ?)")
                 .setParameter(1, order.getItemCount())
                 .setParameter(2, order.getTotal())
                 .setParameter(3, java.sql.Timestamp.valueOf(LocalDateTime.now()))

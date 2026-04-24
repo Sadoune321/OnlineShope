@@ -13,24 +13,14 @@ import jakarta.ejb.TransactionAttribute;
 import jakarta.ejb.TransactionAttributeType;
 import java.util.List;
 
-/*
- * SERVICE DOMAINE — cœur de l'application.
- * Ne connaît QUE des interfaces (Ports).
- * Jamais des implémentations concrètes (JPA, EJB Stateful).
- *
- * [Servlet] → IShopUseCase → [ShopService] → IProductRepository
- *                                           → ICartRepository
- *                                           → IOrderRepository
- */
+
 @Stateless
 public class ShopService implements IShopUseCase {
 
     @EJB
     private IProductRepository productRepository;
-
     @EJB
     private ICartRepository cartRepository;
-
     @EJB
     private IOrderRepository orderRepository;
 
@@ -52,21 +42,22 @@ public class ShopService implements IShopUseCase {
                 "Le produit " + productId + " n'est pas disponible ou est hors stock."
             );
         }
-        Product p    = productRepository.findById(productId);
+        Product p = productRepository.findById(productId);
         CartItem item = new CartItem(p.getId(), p.getDescription(), p.getPurchaseCost(), 1);
         cartRepository.addItem(item);
+
+        
+        productRepository.decrementStock(productId);
+
         return item;
     }
 
     @Override
     public List<CartItem> getCartItems()  { return cartRepository.getItems();     }
-
     @Override
     public double getCartTotal()          { return cartRepository.getTotal();     }
-
     @Override
     public int getCartItemCount()         { return cartRepository.getItemCount(); }
-
     @Override
     public void resetCart()               { cartRepository.reset();               }
 
